@@ -70,7 +70,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Core\ParkingManagement.Domain\" />
     <Folder Include="Infrastructure\ParkingManagement.Persistance\Contexts\" />
   </ItemGroup>
 
