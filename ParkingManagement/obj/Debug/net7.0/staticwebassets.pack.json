@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ASUS\\source\\repos\\ParkingManagement\\ParkingManagement\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ParkingManagement.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ParkingManagement.bundle.scp.css"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ParkingManagement.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.ParkingManagement.props",
+      "PackagePath": "build\\ParkingManagement.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.ParkingManagement.props",
+      "PackagePath": "buildMultiTargeting\\ParkingManagement.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.ParkingManagement.props",
+      "PackagePath": "buildTransitive\\ParkingManagement.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
