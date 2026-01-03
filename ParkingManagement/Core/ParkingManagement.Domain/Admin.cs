@@ -12,5 +12,10 @@ namespace ParkingManagement.Core.ParkingManagement.Domain
         public bool IsActive { get; set; } = true;
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime? LastLogin { get; set; }
+
+
+
+        // Navigation property
+        public virtual ICollection<ParkingLog> ParkingLogs { get; set; }
     }
 }

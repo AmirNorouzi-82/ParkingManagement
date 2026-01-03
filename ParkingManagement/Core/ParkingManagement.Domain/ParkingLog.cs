@@ -10,13 +10,17 @@ namespace ParkingManagement.Core.ParkingManagement.Domain
         public int ParkingSpotId { get; set; }
         public int? AdminId { get; set; }
         public DateTime EntryTime { get; set; } = DateTime.Now;
-
         public DateTime? ExitTime { get; set; }
-
         public decimal? Cost { get; set; }
-
         public PaymentStatus Status { get; set; } = PaymentStatus.Pending;
         public string Notes { get; set; }
+
+
+        // Navigation properties
+        public virtual Vehicle Vehicle { get; set; }
+        public virtual ParkingSpot ParkingSpot { get; set; }
+        public virtual Admin Admin { get; set; }
+
 
         public enum PaymentStatus
         {

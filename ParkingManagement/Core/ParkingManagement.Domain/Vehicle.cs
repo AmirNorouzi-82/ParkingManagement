@@ -12,5 +12,8 @@ namespace ParkingManagement.Core.ParkingManagement.Domain
         public string OwnerName { get; set; }
         public string PhoneNumber { get; set; }
         public DateTime RegisteredAt { get; set; } = DateTime.Now;
+
+        // Navigation property
+        public virtual ICollection<ParkingLog> ParkingLogs { get; set; }
     }
 }
