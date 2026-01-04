@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using ParkingManagement.Infrastructure.ParkingManagement.Persistance.Contexts;
+
 namespace ParkingManagement.API.ParkingManagement.API
 {
     public class Program
@@ -8,6 +11,7 @@ namespace ParkingManagement.API.ParkingManagement.API
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<ParkingDbContext>(c => c.UseSqlServer("DefaultConnection"));
 
             var app = builder.Build();
 
