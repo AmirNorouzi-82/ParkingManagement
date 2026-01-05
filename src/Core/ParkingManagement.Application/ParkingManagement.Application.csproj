@@ -21,9 +21,6 @@
   <ItemGroup>
     <Folder Include="DTO\AdminDTOs\" />
     <Folder Include="DTO\VehicleDTOs\" />
-    <Folder Include="DTO\ParkingStatusDTOs\" />
-    <Folder Include="DTO\ParkingSpotDTOs\" />
-    <Folder Include="DTO\ParkingLogDTOs\" />
   </ItemGroup>
 
 </Project>
