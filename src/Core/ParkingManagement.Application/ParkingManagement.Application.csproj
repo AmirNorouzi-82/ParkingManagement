@@ -17,4 +17,14 @@
     <ProjectReference Include="..\ParkingManagement.Domain\ParkingManagement.Domain.csproj" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="DTO\AdminDTOs\" />
+    <Folder Include="DTO\VehicleDTOs\" />
+    <Folder Include="DTO\ParkingStatusDTOs\" />
+    <Folder Include="DTO\ParkingSpotDTOs\" />
+    <Folder Include="DTO\ParkingLogDTOs\" />
+    <Folder Include="DTO\ParkingAssignmentRequestDTOs\" />
+  </ItemGroup>
+
 </Project>
