@@ -1,0 +1,42 @@
+## Build results
+bin/
+obj/
+out/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## VS Code
+.vscode/
+.vs/
+
+## Rider
+.idea/
+
+## Logs
+*.log
+logs/
+
+## Entity Framework
+Migrations/
+
+## Secrets and settings
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+## ASP.NET Core publish
+wwwroot/
+node_modules/
+dist/
+
+## Others
+*.db
+*.sqlite
+*.pdb
+*.cache
+*.DS_Store
+Thumbs.db
