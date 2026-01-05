@@ -24,7 +24,6 @@
     <Folder Include="DTO\ParkingStatusDTOs\" />
     <Folder Include="DTO\ParkingSpotDTOs\" />
     <Folder Include="DTO\ParkingLogDTOs\" />
-    <Folder Include="DTO\ParkingAssignmentRequestDTOs\" />
   </ItemGroup>
 
 </Project>

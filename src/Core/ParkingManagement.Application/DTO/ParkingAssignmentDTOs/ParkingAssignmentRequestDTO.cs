@@ -1,8 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace ParkingManagement.Domain
+﻿namespace ParkingManagement.Application.DTOs
 {
-    public class ParkingAssignmentRequest
+    public class ParkingAssignmentRequestDto
     {
         public string PlateNumber { get; set; }
         public string Make { get; set; }
