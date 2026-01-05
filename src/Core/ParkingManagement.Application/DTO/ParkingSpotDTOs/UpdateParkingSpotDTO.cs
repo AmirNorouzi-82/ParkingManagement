@@ -1,6 +1,6 @@
 ﻿namespace ParkingManagement.Application.DTOs
 {
-    public class UpdateParkingSpotDto
+    public class UpdateParkingSpotDTO
     {
         public int Id { get; set; }
         public bool IsAvailable { get; set; }

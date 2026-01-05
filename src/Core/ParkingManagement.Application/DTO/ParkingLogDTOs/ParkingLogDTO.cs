@@ -1,6 +1,6 @@
 ﻿namespace ParkingManagement.Application.DTOs
 {
-    public class ParkingLogDto
+    public class ParkingLogDTO
     {
         public int Id { get; set; }
         public int VehicleId { get; set; }

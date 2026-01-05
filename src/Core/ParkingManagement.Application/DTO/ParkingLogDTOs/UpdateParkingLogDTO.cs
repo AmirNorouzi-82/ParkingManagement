@@ -1,6 +1,6 @@
 ﻿namespace ParkingManagement.Application.DTOs
 {
-    public class UpdateParkingLogDto
+    public class UpdateParkingLogDTO
     {
         public int Id { get; set; }
         public DateTime? ExitTime { get; set; }

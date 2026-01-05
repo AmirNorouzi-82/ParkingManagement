@@ -1,9 +1,9 @@
-﻿namespace ParkingManagement.Application.DTOs
+﻿namespace ParkingManagement.Application.DTOs.Auth
 {
-    public class CreateAdminDTO
+    public class AdminInfoDTO
     {
+        public int Id { get; set; }
         public string Username { get; set; }
-        public string Password { get; set; } 
         public string Email { get; set; }
         public string FullName { get; set; }
     }

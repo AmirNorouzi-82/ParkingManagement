@@ -1,6 +1,6 @@
 ﻿namespace ParkingManagement.Application.DTOs
 {
-    public class CreateParkingSpotDto
+    public class CreateParkingSpotDTO
     {
         public string SpotNumber { get; set; }
         public string Zone { get; set; }

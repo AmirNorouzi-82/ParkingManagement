@@ -1,6 +1,6 @@
 ﻿namespace ParkingManagement.Application.DTOs
 {
-    public class SpotDetailDto
+    public class SpotDetailDTO
     {
         public int SpotId { get; set; }
         public string SpotNumber { get; set; }
