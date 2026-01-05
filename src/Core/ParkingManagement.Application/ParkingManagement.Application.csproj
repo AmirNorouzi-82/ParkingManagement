@@ -17,9 +17,4 @@
     <ProjectReference Include="..\ParkingManagement.Domain\ParkingManagement.Domain.csproj" />
   </ItemGroup>
 
-
-  <ItemGroup>
-    <Folder Include="DTO\AdminDTOs\" />
-  </ItemGroup>
-
 </Project>
