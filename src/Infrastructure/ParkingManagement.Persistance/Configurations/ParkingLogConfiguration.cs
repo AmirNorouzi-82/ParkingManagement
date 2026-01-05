@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ParkingManagement.Domain;
+using ParkingManagement.Domain.Enums;
 
 namespace ParkingManagement.Infrastructure.Persistence.Configurations
 {
@@ -21,14 +22,17 @@ namespace ParkingManagement.Infrastructure.Persistence.Configurations
 
             builder.Property(pl => pl.Status)
                    .IsRequired()
-                   .HasConversion<string>();
+                   .HasConversion<string>()
+                   .HasDefaultValue(PaymentStatus.Pending);
 
             builder.Property(pl => pl.Cost)
-                   .HasColumnType("decimal(18,2)")
                    .HasPrecision(18, 2);
 
             builder.Property(pl => pl.Notes)
                    .HasMaxLength(500);
+
+            builder.Property(pl => pl.AdminId)
+                   .IsRequired(false);
 
             builder.HasOne(pl => pl.Vehicle)
                    .WithMany(v => v.ParkingLogs)

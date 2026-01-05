@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ParkingManagement.Persistance.Contexts;
-
+using ParkingManagement.Application.Mappings; // ???? VehicleProfile
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +12,9 @@ builder.Services.AddSwaggerGen();
 // Add DbContext
 builder.Services.AddDbContext<ParkingDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Add AutoMapper
+builder.Services.AddAutoMapper(typeof(VehicleProfile).Assembly);
 
 var app = builder.Build();
 

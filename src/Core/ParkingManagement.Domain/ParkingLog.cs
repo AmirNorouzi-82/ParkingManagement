@@ -1,7 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ParkingManagement.Domain.Enums;
+
 
 namespace ParkingManagement.Domain
+
 {
     public class ParkingLog
     {
@@ -20,13 +23,5 @@ namespace ParkingManagement.Domain
         public virtual Vehicle Vehicle { get; set; }
         public virtual ParkingSpot ParkingSpot { get; set; }
         public virtual Admin Admin { get; set; }
-
-        public enum PaymentStatus
-        {
-            Pending,
-            Paid,
-            Free,
-            Cancelled
-        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using ParkingManagement.Domain.Enums;
 
 namespace ParkingManagement.Domain
 {
@@ -16,13 +17,5 @@ namespace ParkingManagement.Domain
 
         // Navigation property
         public virtual ICollection<ParkingLog> ParkingLogs { get; set; }
-
-        public enum SpotType
-        {
-            Regular,
-            VIP,
-            Disabled,
-            Electric
-        }
     }
 }

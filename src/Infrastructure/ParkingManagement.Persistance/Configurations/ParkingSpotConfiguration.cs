@@ -27,7 +27,12 @@ namespace ParkingManagement.Infrastructure.Persistence.Configurations
                    .HasConversion<string>();
 
             builder.Property(ps => ps.IsAvailable)
-                   .IsRequired();
+                   .IsRequired()
+                   .HasDefaultValue(true);
+
+            builder.Property(ps => ps.IsReserved)
+                   .IsRequired()
+                   .HasDefaultValue(false);
 
             builder.Property(ps => ps.LastOccupiedTime)
                    .HasColumnType("datetime2");
