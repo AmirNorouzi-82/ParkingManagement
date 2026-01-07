@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using ParkingManagement.Persistance.Contexts;
-using ParkingManagement.Application.Mappings; // ???? VehicleProfile
+using ParkingManagement.Application.Mappings;
+using ParkingManagement.Application.Contracts.Persistance;
+using ParkingManagement.Persistance.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,13 @@ builder.Services.AddDbContext<ParkingDbContext>(options =>
 
 // Add AutoMapper
 builder.Services.AddAutoMapper(typeof(VehicleProfile).Assembly);
+
+// Register Repositories & UnitOfWork
+builder.Services.AddScoped<IAdminRepository, AdminRepository>();
+builder.Services.AddScoped<IParkingLogRepository, ParkingLogRepository>();
+builder.Services.AddScoped<IParkingSpotRepository, ParkingSpotRepository>();
+builder.Services.AddScoped<IVehicleRepository, VehicleRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 
