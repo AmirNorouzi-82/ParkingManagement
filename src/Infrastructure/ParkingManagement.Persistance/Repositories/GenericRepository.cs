@@ -10,7 +10,7 @@ using ParkingManagement.Persistance.Contexts;
 
 namespace ParkingManagement.Persistance.Repositories
 {
-    internal abstract class GenericRepository<T> : IGenericRepository<T>  where T : class
+    public abstract class GenericRepository<T> : IGenericRepository<T>  where T : class
     {
         private readonly ParkingDbContext _context;
         protected GenericRepository(ParkingDbContext context)

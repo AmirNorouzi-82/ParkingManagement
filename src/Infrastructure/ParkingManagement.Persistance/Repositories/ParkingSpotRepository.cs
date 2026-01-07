@@ -9,7 +9,7 @@ using ParkingManagement.Persistance.Contexts;
 
 namespace ParkingManagement.Persistance.Repositories
 {
-    internal class ParkingSpotRepository : GenericRepository<ParkingSpot>,IParkingSpotRepository
+    public class ParkingSpotRepository : GenericRepository<ParkingSpot>,IParkingSpotRepository
     {
         private readonly ParkingDbContext _context;
         public ParkingSpotRepository(ParkingDbContext context) : base(context)
