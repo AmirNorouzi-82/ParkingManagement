@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ParkingManagement.Persistance.Contexts;
-using ParkingManagement.Application.Mappings; // ???? VehicleProfile
+using ParkingManagement.Application.Mappings; 
 
 var builder = WebApplication.CreateBuilder(args);
 
