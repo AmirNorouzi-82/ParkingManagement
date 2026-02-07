@@ -1,12 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ParkingManagement.API.ParkingManagement.API.Controllers
+namespace ParkingManagement.API.Controllers
 {
-    public class ParkingLogController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ParkingLogController : ControllerBase
     {
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult Get()
         {
-            return View();
+            return Ok(new { message = "ParkingLog endpoint is working" });
         }
     }
 }

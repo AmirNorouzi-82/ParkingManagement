@@ -1,12 +1,29 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ParkingManagement.API.ParkingManagement.API.Controllers
+namespace ParkingManagement.API.Controllers
 {
-    public class AdminController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class AdminController : ControllerBase
     {
-        public IActionResult Index()
+        private readonly ILogger<AdminController> _logger;
+
+        public AdminController(ILogger<AdminController> logger)
         {
-            return View();
+            _logger = logger;
+        }
+
+        [HttpGet]
+        public IActionResult Get([FromQuery] string? actionName)
+        {
+            if (string.IsNullOrWhiteSpace(actionName))
+            {
+                _logger.LogWarning("Missing actionName");
+                return BadRequest();
+            }
+
+            _logger.LogInformation("Admin action executed");
+            return Ok();
         }
     }
 }

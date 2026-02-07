@@ -1,32 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using ParkingManagement.API.ParkingManagement.API.Models;
-using System.Diagnostics;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
-namespace ParkingManagement.API.ParkingManagement.API.Controllers
+namespace ParkingManagement.API.Controllers
 {
-    public class HomeController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    [AllowAnonymous]
+    public class HomeController : ControllerBase
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        [HttpGet]
+        public IActionResult Get()
         {
-            _logger = logger;
+            return Ok("API is running");
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
+        [HttpGet("privacy")]
         public IActionResult Privacy()
         {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return Ok("Privacy endpoint");
         }
     }
 }
