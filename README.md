@@ -20,7 +20,8 @@
 1-تکمیل معماری کلین (Clean Architecture)
 2-پیاده سازی DTO ها 
 3- پیاده سازی Entity Configuration ها 
-4- پیاده سازی Mapping ها با استفاده از MediateR 
+4- پیاده سازی Mapping ها با استفاده از MediateR
+
 5- پیاده سازی Feature ها ( CQRS) 
 6- اضافه کردن unit of work به Repository ها 
 
