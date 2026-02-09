@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using ParkingManagement.API.Models;
+using ParkingManagement.Core.ParkingManagement.Domain;
 using ParkingManagement.Infrastructure.ParkingManagement.Persistance.Contexts;
 using Serilog;
 using System.IdentityModel.Tokens.Jwt;

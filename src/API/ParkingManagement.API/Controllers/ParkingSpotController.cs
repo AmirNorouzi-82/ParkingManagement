@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Net;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using ParkingManagement.Application.DTOs;
@@ -21,7 +21,7 @@ namespace ParkingManagement.API.Controllers
         {
             var request = new GetAllParkingSpotsRequest();
             var parkingSpots = await _mediator.Send(request);
-            if (parkingSpots is null || parkingSpots.Count == 0)
+            if(parkingSpots is null || parkingSpots.Count == 0)
             {
                 return NoContent();
             }
@@ -41,7 +41,7 @@ namespace ParkingManagement.API.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeleteParkingSpot([FromBody] DeleteParkingSpotDTO deleteParkingSpotDTO)
         {
-            var request = new DeleteParkingSpotRequest { DeleteParkingSpotDTO = deleteParkingSpotDTO };
+            var request = new DeleteParkingSpotRequest { DeleteParkingSpotDTO = deleteParkingSpotDTO};
             await _mediator.Send(request);
             return NoContent();
         }
